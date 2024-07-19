@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.search-bar-demo-container {
+  border: solid grey 1px;
+  border-radius: 3px;
+  padding: 2rem;
+  width: 400px;
+
+  .list {
+    height: 400px;
+    width: 100%;
+    border: solid grey 1px;
+    border-radius: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .item {
+      width: 100%;
+      border-bottom: solid 1px lightgrey;
+      padding: 0.3rem;
+    }
+  }
+  .list-desc {
+    color: grey;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

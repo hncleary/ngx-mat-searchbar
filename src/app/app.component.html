@@ -1,0 +1,32 @@
+<div class="search-bar-demo-container">
+  <h3>ngx-mat-searchbar</h3>
+  <ngx-mat-searchbar></ngx-mat-searchbar>
+  <ngx-mat-searchbar placeholder="Custom Placeholder"></ngx-mat-searchbar>
+  <ngx-mat-searchbar
+    placeholder="Disabled"
+    [disabled]="true"
+  ></ngx-mat-searchbar>
+  <ngx-mat-searchbar value="Value"></ngx-mat-searchbar>
+  <ngx-mat-searchbar
+    value="Custom Icons"
+    matIconSearch="filter_alt"
+    matIconClear="delete"
+  ></ngx-mat-searchbar>
+  <ngx-mat-searchbar
+    placeholder="Outlined"
+    appearance="outline"
+  ></ngx-mat-searchbar>
+</div>
+
+<div class="search-bar-demo-container">
+  <h3>demo</h3>
+  <ngx-mat-searchbar (change)="onFilterChange($event)"></ngx-mat-searchbar>
+  <div class="list">
+    <ng-container *ngFor="let item of filteredList">
+      <div class="item">{{ item }}</div>
+    </ng-container>
+  </div>
+  <div class="list-desc">
+    <p>Showing {{ filteredList.length }} of {{ demoList.length }} items</p>
+  </div>
+</div>

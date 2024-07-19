@@ -1,0 +1,28 @@
+<mat-form-field
+  subscriptSizing="dynamic"
+  [appearance]="appearance"
+  [ngClass]="{ disabled: disabled }"
+>
+  <mat-icon matPrefix>{{ matIconSearch }}</mat-icon>
+  <!-- Double binding works on [(value)] -->
+  <input
+    #filter
+    matInput
+    type="text"
+    autocomplete="off"
+    (keyup)="keyupEvent($event)"
+    (keydown)="$event.stopPropagation()"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+  />
+  <button
+    mat-icon-button
+    matSuffix
+    [disabled]="disabled || !value"
+    class="clear-button"
+    (click)="clear()"
+  >
+    <mat-icon>{{ !value ? "" : matIconClear }}</mat-icon>
+  </button>
+</mat-form-field>

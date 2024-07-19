@@ -1,0 +1,37 @@
+@mixin flex-row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+:host {
+  display: block;
+  padding-bottom: 8px;
+  @include flex-row-center();
+
+  .clear-button {
+    color: #b6b5b5;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      color: #919191;
+    }
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  ::ng-deep .mat-mdc-form-field-flex {
+    min-height: 50px;
+    @include flex-row-center();
+  }
+}
+
+.disabled {
+  mat-form-field,
+  mat-icon,
+  input {
+    color: #b6b5b5;
+  }
+}
