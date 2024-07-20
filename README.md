@@ -31,13 +31,13 @@ Import the `NgxMatSearchbarModule` e.g. in your `app.module.ts`:
 
 ```typescript
 import { MatSelectModule } from '@angular/material';
-import { NgxMatSearchbarModule } from 'NgxMatSearchbar';
+import { NgxMatSearchbarModule } from 'ngx-mat-searchbar';
 
 @NgModule({
   imports: [
     ...
     MatSelectModule,
-    NgxMatSelectSearchModule
+    NgxMatSearchbarModule
   ],
 })
 export class AppModule {}
