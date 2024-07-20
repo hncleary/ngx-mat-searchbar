@@ -2,6 +2,25 @@
   "name": "ngx-mat-searchbar",
   "version": "1.0.0",
   "description": "Customizable Angular material search input form field component",
+  "author": "Hunter Cleary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hncleary/ngx-mat-searchbar"
+  },
+  "bugs": {
+    "url": "https://github.com/hncleary/ngx-mat-searchbar/issues"
+  },
+  "homepage": "https://github.com/hncleary/ngx-mat-searchbar",
+  "keywords": [
+    "angular",
+    "typescript",
+    "search",
+    "searchbar",
+    "material",
+    "component",
+    "angular-material"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^18.1.0",
     "@angular/core": "^18.1.0"

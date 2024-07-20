@@ -1,24 +1,86 @@
 # NgxMatSearchbar
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+https://github.com/hncleary/ngx-mat-searchbar
 
-## Code scaffolding
+## What does it do?
 
-Run `ng generate component component-name --project NgxMatSearchbar` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxMatSearchbar`.
-> Note: Don't forget to add `--project NgxMatSearchbar` or else it will be added to the default project in your `angular.json` file. 
+Angular Material component providing an input field for searching / filtering. Includes prefixed search icon + suffixed clear button.
 
-## Build
+![image](src/assets/searchbar.png)
 
-Run `ng build NgxMatSearchbar` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Try It
 
-## Publishing
+- Clone the source repository and run `npm run start` to serve a demo of the component
 
-After building your library with `ng build NgxMatSearchbar`, go to the dist folder `cd dist/ngx-mat-searchbar` and run `npm publish`.
+![image](src/assets/options.png)
+![image](src/assets/demo.png)
 
-## Running unit tests
+## How to use it?
 
-Run `ng test NgxMatSearchbar` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install `ngx-mat-searchbar` in your project
 
-## Further help
+```bash
+npm install ngx-mat-searchbar
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Import the `NgxMatSearchbarModule` e.g. in your `app.module.ts`:
+
+```typescript
+import { MatSelectModule } from '@angular/material';
+import { NgxMatSearchbarModule } from 'NgxMatSearchbar';
+
+@NgModule({
+  imports: [
+    ...
+    MatSelectModule,
+    NgxMatSelectSearchModule
+  ],
+})
+export class AppModule {}
+```
+
+Use the `ngx-mat-searchbar` component, and trigger events on its change event
+
+```html
+<ngx-mat-searchbar (change)="onFilterChange($event)"></ngx-mat-searchbar>
+```
+
+See the example in https://github.com/hncleary/ngx-mat-searchbar/tree/main/src/app
+
+## Inputs
+
+```typescript
+  /** Text to display as the placeholder of the material form field */
+  @Input() public placeholder = 'Search';
+  /** Disable form input if true */
+  @Input() public disabled = false;
+  /** Time in milliseconds to debounce the change emit output */
+  @Input() public debounce = 250;
+  /** Material icon to display as a prefix to the search input */
+  @Input() public matIconSearch = 'search';
+  /** Material icon to display as a clear button suffix to the search input */
+  @Input() public matIconClear = 'cancel';
+  /** Appearance of search input form field */
+  @Input() public appearance: 'fill' | 'outline' = 'fill';
+```
+
+## Development
+
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0
+
+### Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+### Library Build / NPM Package
+
+Run `npm run build-lib` to build the library and generate an NPM package.
+The build artifacts will be stored in the `dist/ngx-mat-searchbar/` folder.
+
+### Running unit tests
+
+Run `npm run tes-lib` to execute the library unit tests via [Karma](https://karma-runner.github.io)
