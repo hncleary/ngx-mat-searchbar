@@ -2,6 +2,10 @@
 
 https://github.com/hncleary/ngx-mat-searchbar
 
+[![npm version](https://img.shields.io/npm/v/ngx-mat-searchbar.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-searchbar)
+[![npm downloads total](https://img.shields.io/npm/dt/ngx-mat-searchbar.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-searchbar)
+[![npm downloads monthly](https://img.shields.io/npm/dm/ngx-mat-searchbar.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-searchbar)
+
 ## What does it do?
 
 Angular Material component providing an input field for searching / filtering. Includes prefixed search icon + suffixed clear button.
